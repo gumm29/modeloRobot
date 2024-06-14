@@ -1,10 +1,10 @@
 *** Settings ***
 Variables  ../../data/home.yml
+Variables  ./mappings/home_mappings.yml
 Library    SeleniumLibrary
-
-*** Variables ***
-${imput}  //textarea
 
 *** Keywords ***
 Escreve texto
-    Input Text    ${imput}    ${nome}    
+    Element Text Should Be  ${banner_mapped}[title]    ${banner}[title]
+    Log To Console          ${banner_mapped}[name][0]
+    Log To Console          ${banner_mapped}[name][1]

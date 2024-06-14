@@ -1,0 +1,6 @@
+input: //textarea
+banner_mapped:
+  title: //*[@class="gb_I"]
+  name:
+    - 123
+    - teste123
